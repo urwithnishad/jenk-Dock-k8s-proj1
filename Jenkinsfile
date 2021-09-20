@@ -6,7 +6,7 @@ pipeline {
 	
 	environment {
 		PROJECT_ID = 'original-scout-321109'
-                CLUSTER_NAME = 'k8s-cluster'
+                CLUSTER_NAME = 'k8-cluster'
                 LOCATION = 'us-east1-b'
                 CREDENTIALS_ID = 'kubernetes'		
 	}
@@ -44,7 +44,7 @@ pipeline {
 		    steps {
 			    script {
 				    echo "Push Docker Image"
-				    withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
+				    withCredentials([string(credentialsId: 'urwithnishad', variable: 'dockerhub')]) {
             				sh "docker login -u urwithnishad -p ${dockerhub}"
 				    }
 				        myimage.push("${env.BUILD_ID}")
