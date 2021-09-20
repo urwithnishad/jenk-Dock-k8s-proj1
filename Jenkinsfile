@@ -6,8 +6,8 @@ pipeline {
 	
 	environment {
 		PROJECT_ID = 'original-scout-321109'
-                CLUSTER_NAME = 'k8s-cluster'
-                LOCATION = 'us-central1-a'
+                CLUSTER_NAME = 'k8-cluster'
+                LOCATION = 'us-east1-b'
                 CREDENTIALS_ID = 'kubernetes'		
 	}
 	
